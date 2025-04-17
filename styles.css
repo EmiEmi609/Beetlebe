@@ -1,0 +1,623 @@
+/* Root and Base Styling */
+:root {
+    --primary: #0dd0b3;
+    --accent: #000000;
+    --background: #ffffff;
+    --text: #1e293b;
+    --soft-text: #64748b;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 4px 12px rgba(5, 6, 6, 0.936);
+    --font-main: 'DM Serif Text', serif;
+    --font-body: 'Merriweather', serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Navigation */
+  :root {
+    scroll-padding-top: 80px; /* adjust if your header height is different */
+  }
+  .header {
+    background: var(--primary);
+    padding: 1rem 2rem;
+    color: white;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a,
+  .nav-links button {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links button:hover {
+    color: var(--accent);
+  }
+  /* Base nav styles */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links li a,
+.nav-links li button {
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* NAVBAR STYLES */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  background-color: var(--primary);
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'DM Serif Text', serif;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.nav-links a,
+.nav-links button {
+  font-weight: bold;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for the hamburger icon */
+}
+
+/* Mobile responsive nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    
+    /* Start with 0 height for animation */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease; /* Smooth transition for height and opacity */
+  }
+
+  /* When the menu is open */
+  .nav-links.open {
+    max-height: 500px; /* Enough height to show all links */
+    opacity: 1;
+  }
+
+  /* Hamburger icon transforms to 'X' when menu is open */
+  .hamburger.open {
+    transform: rotate(180deg); /* Rotate the hamburger to an 'X' shape */
+  }
+
+  /* Optional: Create a smooth fade-in for the links */
+  .nav-links a {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-links.open a {
+    opacity: 1;
+  }
+}
+
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-family: var(--font-main);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: var(--soft-text);
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.7s;
+  }
+ 
+  .btn-primary:hover {
+    background: #0ea5e9;
+  }
+   /*Who we are section */
+  .about-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Carousel */
+  .carousel-wrapper {
+    flex: 3;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+  }
+  .carousel-item.active {
+    opacity: 1;
+    position: relative;
+  }
+  
+  
+  .carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .carousel-controls button {
+    background: rgba(9, 43, 144, 0.6);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+  
+  
+  /* Product Section */
+  .product-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    
+  }
+  
+  .product-section h2 {
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    color: var(--soft-text);
+  }
+  
+  .product-features li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+
+  .product-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--background);
+    border-radius: 12px;
+    max-width: 960px;
+    margin: 3rem auto;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .product-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-section h2 {
+    font-family: var(--font-main);
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: var(--soft-text);
+  }
+  
+  .product-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    color: var(--soft-text);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .product-features li {
+    padding: 0.75rem 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+  }
+  
+  .product-features li:hover {
+    transform: scale(1.03);
+    background-color: #f9fafb;
+  }
+  
+  .product-img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-img:hover {
+    transform: scale(1.02);
+  }
+  /**********************************************/
+  
+  .feature-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Pricing Section */
+  .pricing-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 280px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--accent);
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-secondary {
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background: #0ea5e9;
+  }
+  
+  .premium {
+    border: 2px solid var(--accent);
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    background-color: white;
+    color: var(--text);
+  }
+  
+  .contact-form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background: #1e293b;
+  }
+  
+  /* Footer */
+  .footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--font-main);
+    font-size: 1rem;
+  }
+  
+  /* AOS Animation Defaults */
+  [data-aos] {
+    transition-property: transform, opacity;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    --background: #0f172a;
+    --text: #f1f5f9;
+    --soft-text: #94a3b8;
+    --card-bg: #1e293b;
+    --primary: #1e1e3b;
+    --accent: #38bdf8;
+    --border: #334155;
+  }
+  
+  body.dark-mode .nav-links a,
+  body.dark-mode .logo,
+  body.dark-mode .footer {
+    color: #f1f5f9;
+  }
+  
+  body.dark-mode .card {
+    background: var(--card-bg);
+    color: var(--text);
+  }
+  
+  body.dark-mode .btn-primary,
+  body.dark-mode .btn-secondary {
+    background: var(--accent);
+    color: white;
+  }
+  
+  body.dark-mode .btn-primary:hover,
+  body.dark-mode .btn-secondary:hover {
+    background: #0ea5e9;
+  }
+  
+  body.dark-mode .carousel-controls button {
+    background: rgba(255, 255, 255, 0.1);
+  }
+   /* Responsive Styles */
+   @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+
+  
+
+    .carousel-controls button {
+      padding: 8px;
+    }
+
+    .pricing-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+@media (max-width: 1000px){
+    .carousel-wrapper {
+        width: 100%;
+        display: none;
+      }
+}
+  @media (max-width: 480px) {
+    .hero-text p {
+      font-size: 1rem;
+    }
+    .btn-primary p{
+        max-width: 200px;
+        font-size: 1rem;
+    }
+    .carousel-controls button {
+      padding: 6px;
+    }
+    
+
+    .card {
+      width: 100%;
+    }
+
+    .footer p {
+      font-size: 0.9rem;
+    }
+  }
