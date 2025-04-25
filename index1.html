@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeetleBe | Smart Wellness Gadget</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Merriweather&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">BeetleBe</a>
+      <div class="nav-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text" data-aos="fade-up">
+      <h1><span id="typed"></span></h1>
+      <p>BeetleBe is a simple yet powerful device designed to help older adults comfortably adapt to today’s fast-paced digital world, empowering them to shop, explore, and make decisions with ease through a single intuitive touch.</p>
+      <a href="#product" class="btn btn-primary">Explore</a>
+      <div class="mini-features">
+        <span><i class="fas fa-check-circle"></i> Easy to Use</span>
+        <span><i class="fas fa-check-circle"></i> One-Touch Shopping</span>
+        <span><i class="fas fa-check-circle"></i> Tailored for Seniors</span>
+      </div>      
+    </div>
+    <div class="hero-img" data-aos="zoom-in">
+      <img src="assets/Gem2.jpg" alt="happy customers" />
+    </div>
+  </section>
+
+  <!-- About -->
+<section id="about" class="section" data-aos="fade-up">
+  <div class="container">
+    <h2>Who We Are</h2>
+    <p class="about-intro">We’re a tech-driven wellness startup focused on accessibility. BeetleBe was born from a desire to make shopping simpler and wellness smarter — especially for older adults.</p>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Wellness First</h3>
+        <p>We believe in empowering seniors to take control of their day-to-day needs without feeling overwhelmed.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-microphone-alt"></i>
+        <h3>Voice Activated</h3>
+        <p>Our voice-first interface ensures anyone can use BeetleBe, no matter their comfort with modern tech.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>Care Without Dependency</h3>
+        <p>We reduce reliance on family by enabling independent decisions in shopping, health, and everyday life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Product Section -->
+  <section id="product" class="section alt" data-aos="fade-up">
+    <div class="container">
+      <h2>Meet BeetleBe</h2>
+      <p>AI-powered kiosk that simplifies everyday decisions.</p>
+
+      <div class="features">
+        <button class="feature-tab active" data-feature="buddy"> Friendlyness </button>
+        <button class="feature-tab" data-feature="price"> Price Benchmark</button>
+        <button class="feature-tab" data-feature="scope"> Option Scope</button>
+        <button class="feature-tab" data-feature="delivery"> Delivery</button>
+      </div>
+
+      <div class="feature-display">
+        <img id="featureImg" src="assets/BeetleBe.png" alt="Feature preview" />
+        <p id="featureDesc">A way to stay connected to todays fast pace advancing technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section pricing" data-aos="fade-up">
+    <div class="container">
+      <h2>Pricing</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Singular</h3>
+          <p class="price">$450</p>
+          <ul>
+            <li>1x Device</li>
+            <li>Single User</li>
+          </ul>
+          <button class="btn btn-secondary">Buy Now</button>
+        </div>
+        <div class="card highlight">
+          <h3>Kiosk Pack</h3>
+          <p class="price">$1125</p>
+          <ul>
+            <li>3x Devices</li>
+            <li>Multi-user Kiosk Access</li>
+          </ul>
+          <button class="btn btn-secondary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="c6f253dd-abf4-4383-a4c8-3af47e152817" />
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 BeetleBe. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({ duration: 800, offset: 120 });
+  
+      new Typed('#typed', {
+        strings: ['Feel Better.', 'Live Smarter.', 'Shop Effortlessly.'],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true,
+      });
+  
+      // Theme toggle
+      const themeBtn = document.getElementById('themeToggle');
+      themeBtn.onclick = () => document.body.classList.toggle('dark');
+  
+      // Mobile Nav
+      document.getElementById('menuToggle').onclick = () => {
+        document.getElementById('navLinks').classList.toggle('open');
+      };
+  
+      // Feature Switch
+      const tabs = document.querySelectorAll('.feature-tab');
+      const featureImg = document.getElementById('featureImg');
+      const featureDesc = document.getElementById('featureDesc');
+  
+      const featureData = {
+        buddy: ['assets/frendly.png', 'helps older adults keep up with today’s tech through one simple, easy-to-use touch interface.'],
+        price: ['assets/benchmark.png', 'Compare prices across stores instantly with one quick tap..'],
+        scope: ['assets/narrow.png', 'Narrow down options to prevent decision fatigue.'],
+        delivery: ['assets/delivery.png', 'One-tap delivery from partnered services.'],
+      };
+  
+      tabs.forEach(tab => {
+        tab.onclick = () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const feature = tab.dataset.feature;
+          featureImg.src = featureData[feature][0];
+          featureDesc.textContent = featureData[feature][1];
+        };
+      });
+    });
+  </script>
+  
+</body>
+</html>
